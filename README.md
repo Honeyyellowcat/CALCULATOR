@@ -17,7 +17,5 @@ Pink Calculator is a feature-rich, graphical calculator built using Python's Tki
 - Tkinter (usually included with Python)
 - SymPy library
 
-You can install the SymPy library using pip:
-
-```bash
-pip install sympy
+## Photo
+![Calculator Image](pink_1.png)
