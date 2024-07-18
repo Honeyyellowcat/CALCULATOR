@@ -1,8 +1,8 @@
-# Sleek Calculator
+# Pink Calculator
 
 ## Overview
 
-Sleek Calculator is a feature-rich, graphical calculator built using Python's Tkinter library and SymPy. It provides an elegant and user-friendly interface for performing various mathematical operations, including trigonometric functions, logarithms, and calculus operations. The calculator also features a history display to keep track of recent calculations.
+Pink Calculator is a feature-rich, graphical calculator built using Python's Tkinter library and SymPy. It provides an elegant and user-friendly interface for performing various mathematical operations, including trigonometric functions, logarithms, and calculus operations. The calculator also features a history display to keep track of recent calculations.
 
 ## Features
 
