@@ -33,9 +33,9 @@ class Calculator(tk.Tk):
         # Create and place buttons
         buttons = [
             ('C', 2, 0), ('CE', 2, 1), ('e^x', 2, 2), ('π', 2, 3),
-            ('sin', 3, 0), ('cos', 3, 1), ('tan', 3, 2), ('d/dx', 3, 3),
-            ('sin⁻¹', 4, 0), ('cos⁻¹', 4, 1), ('tan⁻¹', 4, 2), ('∫', 4, 3),
-            ('log', 5, 0), ('ln', 5, 1), ('%', 5, 2), ('/', 5, 3),
+            ('sin', 3, 0), ('cos', 3, 1), ('tan', 3, 2), ('log', 3, 3),
+            ('sin⁻¹', 4, 0), ('cos⁻¹', 4, 1), ('tan⁻¹', 4, 2), ('ln', 4, 3),
+            ('(', 5, 0), (')', 5, 1), ('%', 5, 2), ('/', 5, 3),
             ('7', 6, 0), ('8', 6, 1), ('9', 6, 2), ('x', 6, 3),
             ('4', 7, 0), ('5', 7, 1), ('6', 7, 2), ('-', 7, 3),
             ('1', 8, 0), ('2', 8, 1), ('3', 8, 2), ('+', 8, 3),
@@ -97,6 +97,7 @@ class Calculator(tk.Tk):
                 expr = self.display.get()
                 expr = expr.replace('π', str(sp.pi))
                 expr = expr.replace('e', str(math.e))
+                expr = expr.replace('x', '*')  # Replace 'x' with '*' for multiplication
                 result = str(sp.sympify(expr).evalf())
                 print(f"Evaluating: {expr} = {result}")  # Debug: Print evaluation
                 self.history.append(expr + " = " + result)
@@ -178,6 +179,7 @@ class Calculator(tk.Tk):
                 self.after(2000, self.clear_display)  # Clear the display after 2 seconds
         else:
             self.display.insert(tk.END, key)
+
     
     def update_history(self):
         self.history_display.delete(0, tk.END)
@@ -190,4 +192,3 @@ class Calculator(tk.Tk):
 if __name__ == "__main__":
     app = Calculator()
     app.mainloop()
- 
