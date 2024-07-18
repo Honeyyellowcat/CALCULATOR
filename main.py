@@ -5,7 +5,7 @@ import math
 class Calculator(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Sleek Calculator")
+        self.title("Pink Calculator")
         self.geometry("400x700")
         self.resizable(False, False)
         
